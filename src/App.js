@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
+import Nav from './components/nav/Nav';
+
 
 function App() {
+  const [page,setPage]=useState('home')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='index-page'>
+        <Nav page={page} setPage={setPage}/>
+        <Home/>
+      </div>
+        <Footer/>
+      
+
+      
+      
+      
+      {/* bubbles */}
+      <>
+        <div className=" snow">
+        </div>
+        <div className=" snow">
+        </div>
+      </>
+      
     </div>
   );
 }
