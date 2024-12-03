@@ -3,6 +3,8 @@ import './App.css';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 import Nav from './components/nav/Nav';
+import Offer from './components/home/Offer';
+import Testimonial from './components/testimonials/Testimonial';
 
 
 function App() {
@@ -11,9 +13,13 @@ function App() {
     <div className="App">
       <div className='index-page'>
         <Nav page={page} setPage={setPage}/>
-        <Home/>
+        <div className='main-page'>
+          <Home/>
+          <Offer/>
+          <Testimonial/>
+        </div>
       </div>
-        <Footer/>
+      <Footer/>
       
 
       
